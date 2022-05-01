@@ -1,3 +1,13 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
 body{
     font-family: 'Roboto', sans-serif;
     color: #212121;
@@ -11,6 +21,11 @@ body{
     --main-color: #212121;
     --back-color: #FFFFFF;
     --button-color: #1971b9;
+}
+
+.section{
+    padding: 94px 0px;
+    border: 5px solid tomato;
 }
 
 a{
