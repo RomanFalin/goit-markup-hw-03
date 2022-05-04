@@ -400,17 +400,21 @@ ul{
 .work-examples{
     display: flex;
     flex-wrap: wrap;
-    margin-left: calc(-1 * var(--item-margin));
-    margin-top: calc(-1 * var(--item-margin));
+    margin-right: calc(-1 * var(--item-margin));
+    margin-bottom: calc(-1 * var(--item-margin));
 }
 
 .work-example{
     background: var(--back-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
-    flex-basis: calc(100% / 3 - var(--item-margin));
-    margin-left: var(--item-margin);
-    margin-top: var(--item-margin);
+    /*flex-basis: calc(100% / 3 - var(--item-margin));*/
+    margin-right: var(--item-margin);
+    margin-bottom: var(--item-margin);
+}
+
+.work-example:nth-child(3n){
+    margin-right: 0px;
 }
 
 .work-title{
