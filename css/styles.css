@@ -21,6 +21,8 @@ body{
     --main-color: #212121;
     --back-color: #FFFFFF;
     --button-color: #1971b9;
+    --item-margin: 30px;
+    --section-margin: 94px;
 }
 
 h1,
@@ -31,6 +33,7 @@ h5,
 h6,
 p{
     margin: 0;
+    padding: 0;
 }
 
 .section{
@@ -47,6 +50,7 @@ p{
     align-items: center;
     padding-top: 24px;
     padding-bottom: 25px;
+    border: 1px #ECECEC solid;
 
 }
 
@@ -164,7 +168,7 @@ ul{
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--back-color);
-    margin-bottom: 30px;
+    margin-bottom: var(--item-margin);
 }
 
 .hero-button{
@@ -197,7 +201,7 @@ ul{
 }
 
 .advantages{
-    margin-top: 94px;
+    margin-top: var(--section-margin);
 }
 
 .adv-features{
@@ -210,7 +214,7 @@ ul{
 }
 
 .adv-features > .item:not(:last-child){
-    margin-right: 30px;
+    margin-right: var(--item-margin);
 }
 
 .features{
@@ -220,6 +224,7 @@ ul{
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--main-color);
+    margin-bottom: 10px;
 }
 
 .features-explain{
@@ -229,7 +234,7 @@ ul{
 }
 
 .activities{
-    margin-top: 94px;
+    margin-top: var(--section-margin);
 }
 
 .what-do{
@@ -240,6 +245,11 @@ ul{
     letter-spacing: 0.03em;
     color: var(--main-color);
     margin-bottom: 50px;
+
+}
+
+.act-example:not(:last-child){
+    margin-right: var(--item-margin);
 }
 
 .act-examples{
@@ -249,8 +259,8 @@ ul{
 
 .team{
     background: var(--back-color);
-    padding-top: 94px;
-    padding-bottom: 94px;
+    margin-top: var(--section-margin);
+    padding-bottom: var(--section-margin);
 }
 
 .team-title{
@@ -265,6 +275,7 @@ ul{
 
 .team-members{
     display: flex;
+    justify-content: center;
 }
 
 .team-member{
@@ -276,9 +287,13 @@ ul{
     width: 270px;
 }
 
+.team-member:not(:last-child){
+    margin-right: var(--item-margin);
+}
+
 .team-member > .item{
-    margin-top: 30px;
-    margin-bottom: 30px;    
+    margin-top: var(--item-margin);
+    margin-bottom: var(--item-margin);    
 }
 
 .team-name{
@@ -340,17 +355,16 @@ ul{
 }
 
 .filters{
-    margin-top: 94px;
+    margin-top: var(--section-margin);
 }
 
 .filter-buttons{
     display: flex;
     justify-content: center;
-    margin-bottom: 34px;
 }
 
-.filter-buttons > .filter-button:not(:last-child){
-    /*margin-right: 8px;*/
+.filter-button:not(:last-child){
+    margin-right: 8px;
 }
 
 .filter-button{
@@ -378,16 +392,25 @@ ul{
     cursor: pointer;
 }
 
+.works{
+    margin-bottom: var(--section-margin);
+    margin-top: 34px;
+}
+
 .work-examples{
-    margin-bottom: 94px;
     display: flex;
+    flex-wrap: wrap;
+    margin-left: calc(-1 * var(--item-margin));
+    margin-top: calc(-1 * var(--item-margin));
 }
 
 .work-example{
     background: var(--back-color);
     border: 1px solid #EEEEEE;
     box-sizing: border-box;
-    width: 370px;
+    flex-basis: calc(100% / 3 - var(--item-margin));
+    margin-left: var(--item-margin);
+    margin-top: var(--item-margin);
 }
 
 .work-title{
@@ -396,6 +419,7 @@ ul{
     line-height: 2;
     letter-spacing: 0.06em;
     color: var(--main-color);
+    margin-bottom: 4px;
 }
 
 .work-explain{
@@ -403,4 +427,8 @@ ul{
     line-height: 1.8;
     letter-spacing: 0.03em;
     color: var(--sub-text-color);
+}
+
+.work-img > .text{
+    margin: 20px 24px
 }
