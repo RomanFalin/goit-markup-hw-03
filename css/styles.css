@@ -366,10 +366,6 @@ ul{
 
 /*----------------------------------------FILTERS----------------------------------------*/
 
-.filters{
-    padding-bottom: 0;
-}
-
 .filter-buttons{
     display: flex;
     justify-content: center;
